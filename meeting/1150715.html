@@ -95,7 +95,7 @@
         /* 仪表盘统计卡片 */
         .dashboard-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 16px;
             margin-bottom: 24px;
         }
@@ -281,11 +281,15 @@
     <!-- 可视化仪表盘看板 -->
     <div class="dashboard-grid">
         <div class="db-card">
-            <div class="db-num">15 个</div>
-            <div class="db-label">已研判外部项目</div>
+            <div class="db-num">17 个</div>
+            <div class="db-label">累计评估/已参项目</div>
         </div>
         <div class="db-card">
             <div class="db-num green">2 个</div>
+            <div class="db-label">已参赛/取得突破</div>
+        </div>
+        <div class="db-card">
+            <div class="db-num green" style="color: var(--primary);">2 个</div>
             <div class="db-label">匹配建议储备 (27年)</div>
         </div>
         <div class="db-card">
@@ -320,6 +324,22 @@
                             </tr>
                         </thead>
                         <tbody>
+                            <!-- 新增已参加项目1 -->
+                            <tr style="background-color: rgba(16, 185, 129, 0.02);">
+                                <td><strong>NEW</strong></td>
+                                <td><strong>【粤讲粤精彩】</strong></td>
+                                <td><strong>已参加。荣获省级一等奖，成功与政府侧建立深度链接。</strong></td>
+                                <td>⭐⭐⭐⭐⭐</td>
+                                <td><span class="status-badge badge-green">已参/荣获省级一等奖</span></td>
+                            </tr>
+                            <!-- 新增已参加项目2 -->
+                            <tr style="background-color: rgba(16, 185, 129, 0.02);">
+                                <td><strong>NEW</strong></td>
+                                <td><strong>【全国科普讲解大赛】</strong></td>
+                                <td><strong>已参加惠州市赛。7月25日决赛，顺利则后续晋级国赛。</strong></td>
+                                <td>⭐⭐⭐⭐⭐</td>
+                                <td><span class="status-badge badge-green">已参/7.25市赛决赛</span></td>
+                            </tr>
                             <tr>
                                 <td>1</td>
                                 <td><strong>“品牌强国”品牌故事大赛</strong></td>
@@ -431,12 +451,37 @@
             </div>
         </div>
 
-        <!-- 第二部分：重点跟进与转接项目 -->
+        <!-- 第二部分：已参赛、重点跟进与建议转接项目 -->
         <div class="col-8">
             <div class="card">
                 <div class="card-title">
-                    <span>二、重点跟进与建议转接项目</span>
-                    <span class="en-title">Priority & Referrals</span>
+                    <span>二、已参赛及重点跟进项目</span>
+                    <span class="en-title">Active & Priority Projects</span>
+                </div>
+
+                <!-- 新增已参赛标杆：粤讲粤精彩 -->
+                <div class="project-item active" style="border-left-width: 6px; background-color: rgba(16, 185, 129, 0.04);">
+                    <div class="project-header">
+                        <span class="project-name" style="color: var(--accent-green); font-size: 16px;">🏆 【粤讲粤精彩】（标杆案例）</span>
+                        <span class="status-badge badge-green">已参加 / 省级一等奖</span>
+                    </div>
+                    <ul>
+                        <li><strong>项目成果：</strong>品牌部已参赛，并成功斩获<strong>省级一等奖</strong>的卓越成绩。</li>
+                        <li><strong>战略价值：</strong>以此赛事为契机，品牌部成功与政府侧（省级主管单位及相关资源）建立起了深度、紧密的互信链接，为后续政企合作及品牌公关打下坚实基础。</li>
+                    </ul>
+                </div>
+
+                <!-- 新增已参赛：全国科普讲解大赛 -->
+                <div class="project-item active" style="border-left-width: 6px;">
+                    <div class="project-header">
+                        <span class="project-name">🔥 【全国科普讲解大赛】</span>
+                        <span class="status-badge badge-orange">已参赛 / 7.25惠州市赛决赛</span>
+                    </div>
+                    <ul>
+                        <li><strong>目前进度：</strong>已参加惠州市科普讲解大赛，目前正积极筹备，锁定 **7月25日** 的市赛决赛。</li>
+                        <li><strong>晋级路径：</strong>若市赛决赛顺利突围，后续将代表地区逐级晋级至全国总决赛（即“全国科普讲解大赛”）。</li>
+                        <li><strong>战略价值：</strong>有助于输出洲明“LED+AI”及智能制造科普形象，展现行业龙头的社会责任与硬核技术科普实力。</li>
+                    </ul>
                 </div>
 
                 <div class="project-item active">
