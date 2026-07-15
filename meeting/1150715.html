@@ -138,21 +138,61 @@
 
         /* 核心结论大卡片样式 */
         .summary-box {
-            background-color: var(--primary-light);
+            background-color: var(--bg-card);
             border-left: 6px solid var(--primary);
-            border-radius: 8px;
-            padding: 20px;
+            border-radius: var(--radius);
+            padding: 28px;
             margin-bottom: 24px;
+            box-shadow: 0 4px 20px var(--shadow);
+            border-top: 1px solid var(--border);
+            border-right: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
         }
 
         .summary-title {
-            font-size: 16px;
+            font-size: 18px;
             font-weight: 700;
             color: var(--text-title);
-            margin-bottom: 12px;
+            margin-bottom: 14px;
             display: flex;
             align-items: center;
             gap: 8px;
+        }
+
+        /* 结论卡片内的网格布局 */
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .summary-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .summary-item-card {
+            background-color: var(--bg-main);
+            border-radius: 8px;
+            padding: 20px;
+            border: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        .summary-item-title {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--text-title);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 8px;
         }
 
         /* 决策标签 */
@@ -267,53 +307,66 @@
         </div>
     </header>
 
-    <!-- 结论先行：核心研判结论与行动建议大卡片 -->
+    <!-- 结论先行：核心研判结论与行动建议 -->
     <div class="summary-box">
         <div class="summary-title">
             <span>💡 核心研判结论与行动建议 (Executive Summary)</span>
         </div>
-        <p style="font-size: 14px; font-weight: 600; margin-bottom: 14px; color: var(--text-title);">
+        <p style="font-size: 14.5px; font-weight: 600; margin-bottom: 20px; color: var(--text-title); line-height: 1.7; border-bottom: 1px solid var(--border); padding-bottom: 16px;">
             品牌部对第一梯队的 17 项 外部赛事进行了筛选与评估。从“时间窗口”或“企业属性匹配度”等维度研判，当前无直接可新增申报的项目。但强相关度的赛事，已和项目组委会取得链接；同时品牌部已拉通内部协同机制并制定了积极的替代方案。
         </p>
         
-        <div class="main-grid" style="gap: 16px;">
-            <div class="col-8" style="background: var(--bg-card); padding: 16px; border-radius: 8px;">
-                <div style="font-size: 13px; font-weight: 700; margin-bottom: 8px; color: var(--text-title);">1. 17项赛事研判现状分布：</div>
-                <ul class="summary-list" style="font-size: 13px;">
+        <!-- 四点核心排版网格 -->
+        <div class="summary-grid">
+            <!-- 1. 17项赛事研判现状分布 -->
+            <div class="summary-item-card">
+                <div class="summary-item-title">
+                    <span>📊 1. 17项赛事研判现状分布</span>
+                </div>
+                <ul class="summary-list" style="font-size: 13px; line-height: 1.7;">
                     <li><strong>已参加项目 (2个)：</strong>【粤讲粤精彩】（获省级一等奖）；【全国科普讲解大赛】（已入围惠州市赛决赛，备战7.25决赛）。</li>
                     <li><strong>相关匹配但时间已逾期 (2个)：</strong>【“品牌强国”品牌故事大赛】、【“云说新科技”科普传播大赛】。</li>
                     <li><strong>企业属性不匹配 (9个)：</strong>多数赛事面向“中小微企业”、“初创团队”或特定政治群众。</li>
                     <li><strong>无相关项目信息 (4个)。</strong></li>
                 </ul>
             </div>
-            <div class="col-4" style="background: var(--bg-card); padding: 16px; border-radius: 8px; display: flex; flex-direction: column; justify-content: center;">
-                <div style="font-size: 13px; font-weight: 700; margin-bottom: 6px; color: var(--text-title);">2. 外部突破与微信建链</div>
-                <p style="font-size: 12px; color: var(--text-muted);">
-                    强相关度的赛事已建立直接沟通渠道。例如：已成功添加<strong>【“品牌强国”品牌故事大赛】</strong>广州赛区主办方负责人的微信，为下届提报奠定信息优势。
+
+            <!-- 2. 外部突破与微信建链 -->
+            <div class="summary-item-card">
+                <div class="summary-item-title">
+                    <span>🔗 2. 外部突破与微信建链</span>
+                </div>
+                <p style="font-size: 13px; color: var(--text-main); line-height: 1.7; text-align: justify;">
+                    针对强相关度的优质赛事，品牌部已建立直接沟通渠道。例如：目前已成功添加<strong>【“品牌强国”品牌故事大赛】</strong>广州赛区主办方相关负责人员的微信，为 2027 年度的提前申报与紧密沟通奠定了扎实的信息优势。
                 </p>
             </div>
-        </div>
 
-        <div class="main-grid" style="gap: 16px; margin-top: 16px;">
-            <div class="col-6" style="background: var(--bg-card); padding: 16px; border-radius: 8px; width: 100%;">
-                <div style="font-size: 13px; font-weight: 700; margin-bottom: 6px; color: var(--text-title);">3. 内部协同：与项目申报部拉通</div>
-                <p style="font-size: 12px; color: var(--text-muted);">
+            <!-- 3. 内部协同：与项目申报部拉通 -->
+            <div class="summary-item-card">
+                <div class="summary-item-title">
+                    <span>🤝 3. 内部协同：与项目申报部拉通</span>
+                </div>
+                <p style="font-size: 13px; color: var(--text-main); line-height: 1.7; text-align: justify;">
                     诸多赛事的分赛区由地方政府或行业协会承办，而公司【项目申报部】已有长期对接渠道，品牌部目前已与项目申报部拉通。未来将共享政府/协会资源，实现信息互通与申报协同。
                 </p>
             </div>
-            <div class="col-6" style="background: var(--bg-card); padding: 16px; border-radius: 8px; width: 100%;">
-                <div style="font-size: 13px; font-weight: 700; margin-bottom: 6px; color: var(--text-title);">4. 替代性行动方案</div>
-                <p style="font-size: 12px; color: var(--text-muted);">
+
+            <!-- 4. 积极性替代方案 -->
+            <div class="summary-item-card">
+                <div class="summary-item-title">
+                    <span>🚀 4. 积极性替代方案</span>
+                </div>
+                <p style="font-size: 13px; color: var(--text-main); line-height: 1.7; text-align: justify;">
                     针对当前外部品宣类赛事的空窗期，品牌部计划开展替代性行动：主动对接工商联等行业协会、正和岛等主流企业家组织，协商是否可以为公司高管安排巡回演讲或主题分享，主动创造品宣发声阵地。
                 </p>
             </div>
         </div>
     </div>
 
-    <!-- 主体栅格 -->
+    <!-- 主体安全栅格 -->
     <div class="main-grid">
         
-        <!-- 左侧：研判结论一览表 -->
+        <!-- 研判结论一览表 -->
         <div class="col-12">
             <div class="card">
                 <div class="card-title">
