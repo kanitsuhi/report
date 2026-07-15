@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>洲明科技品牌部：外部赛事与宣讲活动准入研判报告</title>
+    <title>洲明科技品牌部：外部赛事与宣讲活动准入研判及替代性行动方案</title>
     <style>
         :root {
             /* 浅色模式变量 */
@@ -92,40 +92,6 @@
             color: var(--text-title);
         }
 
-        /* 仪表盘统计卡片 */
-        .dashboard-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 16px;
-            margin-bottom: 24px;
-        }
-
-        .db-card {
-            background-color: var(--bg-card);
-            border-radius: var(--radius);
-            padding: 20px;
-            box-shadow: 0 4px 15px var(--shadow);
-            border: 1px solid var(--border);
-            text-align: center;
-        }
-
-        .db-num {
-            font-size: 28px;
-            font-weight: 700;
-            margin-bottom: 4px;
-            color: var(--primary);
-        }
-
-        .db-num.green { color: var(--accent-green); }
-        .db-num.orange { color: var(--accent-orange); }
-        .db-num.red { color: var(--accent-red); }
-
-        .db-label {
-            font-size: 13px;
-            color: var(--text-muted);
-            font-weight: 600;
-        }
-
         /* 主体布局 */
         .main-grid {
             display: grid;
@@ -170,6 +136,25 @@
             letter-spacing: 1px;
         }
 
+        /* 核心结论大卡片样式 */
+        .summary-box {
+            background-color: var(--primary-light);
+            border-left: 6px solid var(--primary);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 24px;
+        }
+
+        .summary-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--text-title);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
         /* 决策标签 */
         .status-badge {
             display: inline-block;
@@ -178,10 +163,11 @@
             font-size: 12px;
             font-weight: 600;
             text-align: center;
+            white-space: nowrap;
         }
         .badge-green { background-color: rgba(16, 185, 129, 0.1); color: var(--accent-green); }
         .badge-orange { background-color: rgba(245, 158, 11, 0.1); color: var(--accent-orange); }
-        .badge-red { background-color: rgba(239, 68, 110, 0.1); color: var(--accent-red); }
+        .badge-red { background-color: rgba(239, 68, 68, 0.1); color: var(--accent-red); }
         .badge-blue { background-color: rgba(59, 130, 246, 0.1); color: #3b82f6; }
         .badge-gray { background-color: rgba(156, 163, 175, 0.1); color: #9ca3af; }
 
@@ -198,7 +184,7 @@
         }
 
         th, td {
-            padding: 10px 12px;
+            padding: 12px;
             border-bottom: 1px solid var(--border);
         }
 
@@ -217,8 +203,7 @@
             border-left: 4px solid var(--border);
         }
         .project-item.active { border-left-color: var(--accent-green); }
-        .project-item.transfer { border-left-color: #3b82f6; }
-        .project-item.unmatch { border-left-color: #9ca3af; }
+        .project-item.unmatch { border-left-color: var(--accent-red); }
 
         .project-header {
             display: flex;
@@ -255,6 +240,10 @@
             font-weight: bold;
         }
 
+        .summary-list li::before {
+            color: var(--accent-green);
+        }
+
         a {
             color: var(--primary);
             text-decoration: none;
@@ -270,7 +259,7 @@
 <div class="container">
     <!-- 页眉区域 -->
     <header>
-        <h1>外部赛事与宣讲活动准入研判报告</h1>
+        <h1>外部赛事与宣讲活动准入研判及替代性行动方案</h1>
         <div class="meta-grid">
             <div class="meta-item"><strong>评估时间：</strong>2026年7月15日</div>
             <div class="meta-item"><strong>评估部门：</strong>品牌部</div>
@@ -278,172 +267,189 @@
         </div>
     </header>
 
-    <!-- 可视化仪表盘看板 -->
-    <div class="dashboard-grid">
-        <div class="db-card">
-            <div class="db-num">17 个</div>
-            <div class="db-label">累计评估/已参项目</div>
+    <!-- 结论先行：核心研判结论与行动建议大卡片 -->
+    <div class="summary-box">
+        <div class="summary-title">
+            <span>💡 核心研判结论与行动建议 (Executive Summary)</span>
         </div>
-        <div class="db-card">
-            <div class="db-num green">2 个</div>
-            <div class="db-label">已参赛/取得突破</div>
+        <p style="font-size: 14px; font-weight: 600; margin-bottom: 14px; color: var(--text-title);">
+            品牌部对第一梯队的 17 项 外部赛事进行了筛选与评估。从“时间窗口”或“企业属性匹配度”等维度研判，当前无直接可新增申报的项目。但强相关度的赛事，已和项目组委会取得链接；同时品牌部已拉通内部协同机制并制定了积极的替代方案。
+        </p>
+        
+        <div class="main-grid" style="gap: 16px;">
+            <div class="col-8" style="background: var(--bg-card); padding: 16px; border-radius: 8px;">
+                <div style="font-size: 13px; font-weight: 700; margin-bottom: 8px; color: var(--text-title);">1. 17项赛事研判现状分布：</div>
+                <ul class="summary-list" style="font-size: 13px;">
+                    <li><strong>已参加项目 (2个)：</strong>【粤讲粤精彩】（获省级一等奖）；【全国科普讲解大赛】（已入围惠州市赛决赛，备战7.25决赛）。</li>
+                    <li><strong>相关匹配但时间已逾期 (2个)：</strong>【“品牌强国”品牌故事大赛】、【“云说新科技”科普传播大赛】。</li>
+                    <li><strong>企业属性不匹配 (9个)：</strong>多数赛事面向“中小微企业”、“初创团队”或特定政治群众。</li>
+                    <li><strong>无相关项目信息 (4个)。</strong></li>
+                </ul>
+            </div>
+            <div class="col-4" style="background: var(--bg-card); padding: 16px; border-radius: 8px; display: flex; flex-direction: column; justify-content: center;">
+                <div style="font-size: 13px; font-weight: 700; margin-bottom: 6px; color: var(--text-title);">2. 外部突破与微信建链</div>
+                <p style="font-size: 12px; color: var(--text-muted);">
+                    强相关度的赛事已建立直接沟通渠道。例如：已成功添加<strong>【“品牌强国”品牌故事大赛】</strong>广州赛区主办方负责人的微信，为下届提报奠定信息优势。
+                </p>
+            </div>
         </div>
-        <div class="db-card">
-            <div class="db-num green" style="color: var(--primary);">2 个</div>
-            <div class="db-label">匹配建议储备 (27年)</div>
-        </div>
-        <div class="db-card">
-            <div class="db-num orange">2 个</div>
-            <div class="db-label">建议转接相关部门</div>
-        </div>
-        <div class="db-card">
-            <div class="db-num red">7 个</div>
-            <div class="db-label">企业属性不匹配</div>
+
+        <div class="main-grid" style="gap: 16px; margin-top: 16px;">
+            <div class="col-6" style="background: var(--bg-card); padding: 16px; border-radius: 8px; width: 100%;">
+                <div style="font-size: 13px; font-weight: 700; margin-bottom: 6px; color: var(--text-title);">3. 内部协同：与项目申报部拉通</div>
+                <p style="font-size: 12px; color: var(--text-muted);">
+                    诸多赛事的分赛区由地方政府或行业协会承办，而公司【项目申报部】已有长期对接渠道，品牌部目前已与项目申报部拉通。未来将共享政府/协会资源，实现信息互通与申报协同。
+                </p>
+            </div>
+            <div class="col-6" style="background: var(--bg-card); padding: 16px; border-radius: 8px; width: 100%;">
+                <div style="font-size: 13px; font-weight: 700; margin-bottom: 6px; color: var(--text-title);">4. 替代性行动方案</div>
+                <p style="font-size: 12px; color: var(--text-muted);">
+                    针对当前外部品宣类赛事的空窗期，品牌部计划开展替代性行动：主动对接工商联等行业协会、正和岛等主流企业家组织，协商是否可以为公司高管安排巡回演讲或主题分享，主动创造品宣发声阵地。
+                </p>
+            </div>
         </div>
     </div>
 
-    <!-- 主体内容 -->
+    <!-- 主体栅格 -->
     <div class="main-grid">
         
-        <!-- 第一部分：研判结论一览表 -->
+        <!-- 左侧：研判结论一览表 -->
         <div class="col-12">
             <div class="card">
                 <div class="card-title">
-                    <span>一、研判结论一览表</span>
-                    <span class="en-title">Executive Summary</span>
+                    <span>二、研判结论一览表</span>
+                    <span class="en-title">Overview Dashboard</span>
                 </div>
                 <div class="table-responsive">
                     <table>
                         <thead>
                             <tr>
-                                <th style="width: 5%;">序号</th>
+                                <th style="width: 5%; text-align: center;">序号</th>
                                 <th style="width: 30%;">项目/赛事名称</th>
+                                <th style="width: 15%; text-align: center;">匹配度</th>
                                 <th style="width: 35%;">核心研判结论</th>
-                                <th style="width: 15%;">匹配度</th>
-                                <th style="width: 15%;">参会状态 / 建议</th>
+                                <th style="width: 15%; text-align: center;">状态标签</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <!-- 新增已参加项目1 -->
                             <tr style="background-color: rgba(16, 185, 129, 0.02);">
-                                <td><strong>NEW</strong></td>
+                                <td style="text-align: center; font-weight: bold; color: var(--accent-green);">已参</td>
                                 <td><strong>【粤讲粤精彩】</strong></td>
-                                <td><strong>已参加。荣获省级一等奖，成功与政府侧建立深度链接。</strong></td>
-                                <td>⭐⭐⭐⭐⭐</td>
-                                <td><span class="status-badge badge-green">已参/荣获省级一等奖</span></td>
+                                <td style="text-align: center;">⭐⭐⭐⭐⭐</td>
+                                <td>已参加。且取得省级一等奖成绩，成功与政府侧建立深度链接。</td>
+                                <td style="text-align: center;"><span class="status-badge badge-green">已参赛·标杆</span></td>
                             </tr>
-                            <!-- 新增已参加项目2 -->
                             <tr style="background-color: rgba(16, 185, 129, 0.02);">
-                                <td><strong>NEW</strong></td>
+                                <td style="text-align: center; font-weight: bold; color: var(--accent-green);">已参</td>
                                 <td><strong>【全国科普讲解大赛】</strong></td>
-                                <td><strong>已参加惠州市赛。7月25日决赛，顺利则后续晋级国赛。</strong></td>
-                                <td>⭐⭐⭐⭐⭐</td>
-                                <td><span class="status-badge badge-green">已参/7.25市赛决赛</span></td>
+                                <td style="text-align: center;">⭐⭐⭐⭐⭐</td>
+                                <td>已参加惠州市科普讲解大赛。7月25日决赛。顺利则后续晋级国赛。</td>
+                                <td style="text-align: center;"><span class="status-badge badge-green">已参赛·备战中</span></td>
                             </tr>
                             <tr>
-                                <td>1</td>
-                                <td><strong>“品牌强国”品牌故事大赛</strong></td>
-                                <td>赛事与企业属性匹配。但26年度活动已逾期(6月30日截止)。</td>
-                                <td>⭐⭐⭐⭐⭐</td>
-                                <td><span class="status-badge badge-green">列入27年储备</span></td>
+                                <td style="text-align: center;">01</td>
+                                <td><strong>【“品牌强国”品牌故事大赛】</strong></td>
+                                <td style="text-align: center;">⭐⭐⭐⭐⭐</td>
+                                <td>赛事与企业属性匹配。但26年度活动报名和稿件提交已于6月30日截止，已逾期。</td>
+                                <td style="text-align: center;"><span class="status-badge badge-green">27年重点储备</span></td>
                             </tr>
                             <tr>
-                                <td>2</td>
-                                <td><strong>“云说新科技”科普传播大赛</strong></td>
-                                <td>可作为品牌声量尝试。第六届已逾期(3月27日已召开终评)。</td>
-                                <td>⭐⭐⭐</td>
-                                <td><span class="status-badge badge-green">关注下届通知</span></td>
+                                <td style="text-align: center;">02</td>
+                                <td><strong>【“云说新科技”科普传播大赛】</strong></td>
+                                <td style="text-align: center;">⭐⭐⭐</td>
+                                <td>第六届大赛已于2026年3月27日至29日召开，已逾期。考虑以科普短视频形式参赛。</td>
+                                <td style="text-align: center;"><span class="status-badge badge-green">下届动态关注</span></td>
                             </tr>
                             <tr>
-                                <td>3</td>
-                                <td><strong>全国颠覆性技术创新大赛</strong></td>
-                                <td>硬核技术赛事。7月已在总决赛阶段，当前无法报名。</td>
-                                <td>⭐⭐⭐</td>
-                                <td><span class="status-badge badge-blue">建议转接研发部</span></td>
+                                <td style="text-align: center;">03</td>
+                                <td><strong>【中博会“专精特新”专场】</strong></td>
+                                <td style="text-align: center;">❌ 属性不符</td>
+                                <td>实际上是展会，非品宣类赛事。建议如有需求考虑转接到市场部评估。</td>
+                                <td style="text-align: center;"><span class="status-badge badge-red">属性不符</span></td>
                             </tr>
                             <tr>
-                                <td>4</td>
-                                <td><strong>中博会“专精特新”企业专场</strong></td>
-                                <td>实际为展会，非宣讲赛事。9月3-6日在广州召开。</td>
-                                <td>⭐⭐</td>
-                                <td><span class="status-badge badge-blue">建议转接市场部</span></td>
+                                <td style="text-align: center;">04</td>
+                                <td><strong>【全国颠覆性技术创新大赛】</strong></td>
+                                <td style="text-align: center;">❌ 属性不符</td>
+                                <td>强调“改变游戏规则的战略技术”项目，非品宣类赛事。且7月已在总决赛阶段，无法报名。</td>
+                                <td style="text-align: center;"><span class="status-badge badge-red">属性不符</span></td>
                             </tr>
                             <tr>
-                                <td>5</td>
-                                <td><strong>“创客中国”创新创业大赛</strong></td>
-                                <td>洲明非赛事面向的“中小微企业”，且26年报名已逾期(7月10日)。</td>
-                                <td>❌ 属性不符</td>
-                                <td><span class="status-badge badge-red">不予考虑</span></td>
+                                <td style="text-align: center;">05</td>
+                                <td><strong>【“创客中国”创新创业大赛】</strong></td>
+                                <td style="text-align: center;">❌ 属性不符</td>
+                                <td>洲明非赛事面向的“中小微企业”，且26年度报名已于7月10日截止，已逾期。</td>
+                                <td style="text-align: center;"><span class="status-badge badge-red">属性不符</span></td>
                             </tr>
                             <tr>
-                                <td>6</td>
-                                <td><strong>中国创新创业大赛</strong></td>
-                                <td>针对创业公司，且要求企业2025年营业收入不超过2亿元。</td>
-                                <td>❌ 属性不符</td>
-                                <td><span class="status-badge badge-red">不予考虑</span></td>
+                                <td style="text-align: center;">06</td>
+                                <td><strong>【中国创新创业大赛】</strong></td>
+                                <td style="text-align: center;">❌ 属性不符</td>
+                                <td>赛事属于“创业赛事”，且地方赛要求企业2025年营业收入不超过2亿元人民币。</td>
+                                <td style="text-align: center;"><span class="status-badge badge-red">属性不符</span></td>
                             </tr>
                             <tr>
-                                <td>7</td>
-                                <td><strong>“中国创翼”创业创新大赛</strong></td>
-                                <td>赛事属性为“创业赛事”，与洲明成熟期企业属性不符。</td>
-                                <td>❌ 属性不符</td>
-                                <td><span class="status-badge badge-red">不予考虑</span></td>
+                                <td style="text-align: center;">07</td>
+                                <td><strong>【“中国创翼”创业创新大赛】</strong></td>
+                                <td style="text-align: center;">❌ 属性不符</td>
+                                <td>赛事属于“创业赛事”。</td>
+                                <td style="text-align: center;"><span class="status-badge badge-red">属性不符</span></td>
                             </tr>
                             <tr>
-                                <td>8</td>
-                                <td><strong>“创青春”中国青年创新创业大赛</strong></td>
-                                <td>针对“青年创业”团队，非品牌及成熟业务品宣通道。</td>
-                                <td>❌ 属性不符</td>
-                                <td><span class="status-badge badge-red">不予考虑</span></td>
+                                <td style="text-align: center;">08</td>
+                                <td><strong>【“创青春”中国青年创青春大赛】</strong></td>
+                                <td style="text-align: center;">❌ 属性不符</td>
+                                <td>赛事针对“青年创业”。</td>
+                                <td style="text-align: center;"><span class="status-badge badge-red">属性不符</span></td>
                             </tr>
                             <tr>
-                                <td>9</td>
-                                <td><strong>“启航十五五 共筑中国梦”百姓宣讲</strong></td>
-                                <td>聚焦山东省内，无广东赛区，且偏向非商业政治宣讲。</td>
-                                <td>❌ 属性不符</td>
-                                <td><span class="status-badge badge-red">不予考虑</span></td>
+                                <td style="text-align: center;">09</td>
+                                <td><strong>【“启航十五五 共筑中国梦”百姓宣讲】</strong></td>
+                                <td style="text-align: center;">❌ 属性不符</td>
+                                <td>赛事面向山东省内，无广东非赛区。</td>
+                                <td style="text-align: center;"><span class="status-badge badge-red">属性不符</span></td>
                             </tr>
                             <tr>
-                                <td>10</td>
-                                <td><strong>“强国复兴有我”群众性主题宣讲</strong></td>
-                                <td>主题为宣传红色精神、教化群众，不符合企业品牌宣传属性。</td>
-                                <td>❌ 属性不符</td>
-                                <td><span class="status-badge badge-red">不予考虑</span></td>
+                                <td style="text-align: center;">10</td>
+                                <td><strong>【“强国复兴有我”群众性主题宣讲】</strong></td>
+                                <td style="text-align: center;">❌ 属性不符</td>
+                                <td>赛事主题为宣传红色精神教化群众。</td>
+                                <td style="text-align: center;"><span class="status-badge badge-red">属性不符</span></td>
                             </tr>
                             <tr>
-                                <td>11</td>
-                                <td><strong>“中国梦 劳动美”全国职工宣讲</strong></td>
-                                <td>全国总工会主导的特定宣讲团模式，非自主申报类公开赛事。</td>
-                                <td>❌ 属性不符</td>
-                                <td><span class="status-badge badge-red">不予考虑</span></td>
+                                <td style="text-align: center;">11</td>
+                                <td><strong>【“中国梦 劳动美”全国职工宣讲】</strong></td>
+                                <td style="text-align: center;">❌ 属性不符</td>
+                                <td>非赛事活动。全国总工会组建宣讲团模式，不一定匹配。</td>
+                                <td style="text-align: center;"><span class="status-badge badge-red">属性不符</span></td>
                             </tr>
                             <tr>
-                                <td>12</td>
-                                <td><strong>制造业“单项冠军”企业创新宣讲</strong></td>
-                                <td>无对应宣讲项目。仅有政府指导的“交流会”，以单向输出为主。</td>
-                                <td>--</td>
-                                <td><span class="status-badge badge-gray">无相关项目</span></td>
+                                <td style="text-align: center;">12</td>
+                                <td><strong>【全国制造业“单项冠军”企业创新宣讲】</strong></td>
+                                <td style="text-align: center;">--</td>
+                                <td>无相关项目信息。类似活动多为政府领导单向输出。</td>
+                                <td style="text-align: center;"><span class="status-badge badge-gray">无相关信息</span></td>
                             </tr>
                             <tr>
-                                <td>13</td>
-                                <td><strong>粤港澳大湾区企业家精神高质量宣讲</strong></td>
-                                <td>公开渠道无对应赛事或申报项目信息。</td>
-                                <td>--</td>
-                                <td><span class="status-badge badge-gray">无相关项目</span></td>
+                                <td style="text-align: center;">13</td>
+                                <td><strong>【粤港澳大湾区企业家精神高质量宣讲】</strong></td>
+                                <td style="text-align: center;">--</td>
+                                <td>无相关项目信息。</td>
+                                <td style="text-align: center;"><span class="status-badge badge-gray">无相关信息</span></td>
                             </tr>
                             <tr>
-                                <td>14</td>
-                                <td><strong>“新质生产力”主题宣讲大赛</strong></td>
-                                <td>无对应赛事或公开项目信息。</td>
-                                <td>--</td>
-                                <td><span class="status-badge badge-gray">无相关项目</span></td>
+                                <td style="text-align: center;">14</td>
+                                <td><strong>【“新质生产力”主题宣讲大赛】</strong></td>
+                                <td style="text-align: center;">--</td>
+                                <td>无相关项目信息。</td>
+                                <td style="text-align: center;"><span class="status-badge badge-gray">无相关信息</span></td>
                             </tr>
                             <tr>
-                                <td>15</td>
-                                <td><strong>“科创中国”创新创业大赛</strong></td>
-                                <td>无对应赛事（疑为“中国创新创业大赛”之口误或误传）。</td>
-                                <td>--</td>
-                                <td><span class="status-badge badge-gray">无相关项目</span></td>
+                                <td style="text-align: center;">15</td>
+                                <td><strong>【“科创中国”创新创业大赛】</strong></td>
+                                <td style="text-align: center;">--</td>
+                                <td>无相关项目信息（疑为“中国创新创业大赛”之误传）。</td>
+                                <td style="text-align: center;"><span class="status-badge badge-gray">无相关信息</span></td>
                             </tr>
                         </tbody>
                     </table>
@@ -451,141 +457,145 @@
             </div>
         </div>
 
-        <!-- 第二部分：已参赛、重点跟进与建议转接项目 -->
+        <!-- 详细信息部分 -->
         <div class="col-8">
             <div class="card">
                 <div class="card-title">
-                    <span>二、已参赛及重点跟进项目</span>
-                    <span class="en-title">Active & Priority Projects</span>
+                    <span>三、重点匹配项目详情</span>
+                    <span class="en-title">Detailed Analysis</span>
                 </div>
 
-                <!-- 新增已参赛标杆：粤讲粤精彩 -->
+                <!-- 粤讲粤精彩 -->
                 <div class="project-item active" style="border-left-width: 6px; background-color: rgba(16, 185, 129, 0.04);">
                     <div class="project-header">
-                        <span class="project-name" style="color: var(--accent-green); font-size: 16px;">🏆 【粤讲粤精彩】（标杆案例）</span>
+                        <span class="project-name" style="color: var(--accent-green);">🏆 【粤讲粤精彩】</span>
                         <span class="status-badge badge-green">已参加 / 省级一等奖</span>
                     </div>
                     <ul>
-                        <li><strong>项目成果：</strong>品牌部已参赛，并成功斩获<strong>省级一等奖</strong>的卓越成绩。</li>
-                        <li><strong>战略价值：</strong>以此赛事为契机，品牌部成功与政府侧（省级主管单位及相关资源）建立起了深度、紧密的互信链接，为后续政企合作及品牌公关打下坚实基础。</li>
+                        <li><strong>核心结论：</strong>已参加。且取得省级一等奖成绩，成功与政府侧建立深度链接。</li>
                     </ul>
                 </div>
 
-                <!-- 新增已参赛：全国科普讲解大赛 -->
+                <!-- 全国科普讲解大赛 -->
                 <div class="project-item active" style="border-left-width: 6px;">
                     <div class="project-header">
                         <span class="project-name">🔥 【全国科普讲解大赛】</span>
                         <span class="status-badge badge-orange">已参赛 / 7.25惠州市赛决赛</span>
                     </div>
                     <ul>
-                        <li><strong>目前进度：</strong>已参加惠州市科普讲解大赛，目前正积极筹备，锁定 **7月25日** 的市赛决赛。</li>
-                        <li><strong>晋级路径：</strong>若市赛决赛顺利突围，后续将代表地区逐级晋级至全国总决赛（即“全国科普讲解大赛”）。</li>
-                        <li><strong>战略价值：</strong>有助于输出洲明“LED+AI”及智能制造科普形象，展现行业龙头的社会责任与硬核技术科普实力。</li>
+                        <li><strong>核心结论：</strong>已参加惠州市科普讲解大赛。7月25日决赛。顺利则后续晋级至“全国科普讲解大赛”。</li>
                     </ul>
                 </div>
 
+                <!-- 品牌强国 -->
                 <div class="project-item active">
                     <div class="project-header">
                         <span class="project-name">1. 【“品牌强国”品牌故事大赛】</span>
-                        <span class="status-badge badge-green">匹配但逾期 / 27年重点储备</span>
+                        <span class="status-badge badge-green">储备项目 / 2027年重点跟进</span>
                     </div>
                     <ul>
-                        <li><strong>研判结论：</strong>赛事与洲明品牌调性高度匹配，是讲好洲明品牌故事的极佳窗口，但本届已逾期。</li>
-                        <li><strong>详细信息：</strong>2026年度报名与稿件提交截止至6月30日。广州/广东赛区已于4月17日正式发布通知。</li>
-                        <li><strong>主办单位：</strong>中国质量协会主办总决赛，各省/市质量协会主办分赛区。</li>
-                        <li><strong>建议行动：</strong>列入2027年品牌部重点储备项目。计划于2027年第一季度主动对接广东省质量协会，提前筹备申报视频。</li>
-                        <li><strong>相关链接：</strong><a href="http://www.gdqm.com.cn/quality/aboutbrand.html" target="_blank">广东省质量协会官网通知页面</a></li>
+                        <li><strong>核心结论：</strong>赛事与企业属性匹配。但26年度活动报名和稿件提交截止日期为6月30日，已逾期。</li>
+                        <li><strong>主办单位：</strong>中国质量协会主办总决赛，各省/市质量协会主办分赛区。广州/广东赛区已于4月17日正式发布通知。</li>
+                        <li><strong>工作突破：</strong>品牌部已与该项目组委会取得直接链接，成功添加了广州赛区主办方相关人员的微信。后续将保持紧密沟通。</li>
+                        <li><strong>相关链接：</strong>
+                            <a href="http://www.gdqm.com.cn/quality/aboutbrand.html" target="_blank">广东省质量协会官网</a> | 
+                            <a href="https://mp.weixin.qq.com/s/i4xBNlDgqf9ucO-D_jqkYg" target="_blank">官方公众号推文</a>
+                        </li>
                     </ul>
                 </div>
 
+                <!-- 云说新科技 -->
                 <div class="project-item active">
                     <div class="project-header">
                         <span class="project-name">2. 【“云说新科技”科普传播大赛】</span>
-                        <span class="status-badge badge-green">可尝试但逾期 / 26年底关注下届</span>
+                        <span class="status-badge badge-green">下届动态关注</span>
                     </div>
                     <ul>
-                        <li><strong>研判结论：</strong>可作为低成本品牌宣传尝试。形式以科普短视频为主，主要面向科技创新主体、高校及科技工作者。</li>
-                        <li><strong>详细信息：</strong>第六届大赛终评会已于2026年3月27日至29日在天津召开，本届已逾期。</li>
-                        <li><strong>建议行动：</strong>第七届预计将于2026年底至2027年初发布新通知。届时可评估是否将我们的“LED+AI”场景技术科普内容转化为短视频参赛。</li>
-                        <li><strong>相关链接：</strong><a href="https://www.cmes.org/kphd/93109317e675452c83b9ad2e9457652c.html" target="_blank">中国机械工程学会赛事公示</a></li>
-                    </ul>
-                </div>
-
-                <div class="project-item transfer">
-                    <div class="project-header">
-                        <span class="project-name">3. 【全国颠覆性技术创新大赛】</span>
-                        <span class="status-badge badge-blue">技术赛事 / 建议转接研发部</span>
-                    </div>
-                    <ul>
-                        <li><strong>研判结论：</strong>属于技术研发领域的硬核高精尖赛事，非品牌部常规品宣赛事。目前7月正值总决赛阶段，当前无法报名。</li>
-                        <li><strong>建议行动：</strong>建议将该信息转接、同步至研发部，由其牵头研判下届是否以公司的前沿技术（如 LED 光显颠覆性技术、AI+LED 等）作为主导项目申报。</li>
-                        <li><strong>相关链接：</strong><a href="https://www2.scut.edu.cn/ist/2026/0302/c29198a618779/page.htm" target="_blank">华南理工大学成果转化申报参考页面</a></li>
-                    </ul>
-                </div>
-
-                <div class="project-item transfer">
-                    <div class="project-header">
-                        <span class="project-name">4. 【中博会“专精特新”企业专场】</span>
-                        <span class="status-badge badge-blue">展会性质 / 建议转接市场部</span>
-                    </div>
-                    <ul>
-                        <li><strong>研判结论：</strong>此项目本质为大型展览会，并非评选和演讲类比赛。</li>
-                        <li><strong>展会信息：</strong>时间定于2026年9月3日—6日，地点在广州中国进出口商品交易会展馆D区。</li>
-                        <li><strong>建议行动：</strong>转接到市场部评估参展需求。若市场部有既定参展计划，品牌部可协同策划，在展会现场设立宣讲台进行品牌现场输出。</li>
+                        <li><strong>核心结论：</strong>第六届大赛终评会已于2026年3月27日至29日在天津召开，已逾期。</li>
+                        <li><strong>赛事属性：</strong>需考虑赛事与企业属性非强相关，以科普短视频为主要表达形式。赛事主要面向高校、科研院所、企业等科技创新主体的硕博研究生、本科生、专科生以及科技工作者等。</li>
+                        <li><strong>建议行动：</strong>第七届预计将于2026年底至2027年初发布新通知。</li>
+                        <li><strong>相关链接：</strong><a href="https://www.cmes.org/kphd/93109317e675452c83b9ad2e9457652c.html" target="_blank">中国机械工程学会公示</a></li>
                     </ul>
                 </div>
             </div>
         </div>
 
-        <!-- 第三部分：属性不匹配与无信息说明 -->
+        <!-- 右侧：属性不匹配及无信息说明 -->
         <div class="col-4">
-            <!-- 属性不匹配列表 -->
+            <!-- 属性不匹配及建议转接 -->
             <div class="card">
                 <div class="card-title">
-                    <span>三、属性不匹配项目</span>
+                    <span>四、属性不匹配项目</span>
                     <span class="en-title">Unmatched</span>
                 </div>
                 <div style="font-size: 13px; color: var(--text-muted); margin-bottom: 16px;">
-                    以下项目与洲明科技（大体量、成熟上市公司）的企业属性不匹配，主要面向初创、中小微企业，或非商业政治宣讲，不予考虑申报。
+                    以下项目从赛事定位、参赛要求或区域限制上与成熟期上市公司属性不匹配，品牌部将不予作为品宣赛道考虑。
                 </div>
 
+                <!-- 中博会 -->
                 <div class="project-item unmatch" style="padding: 12px; margin-bottom: 10px;">
-                    <div style="font-weight: 600; font-size: 14px; margin-bottom: 4px;">“创客中国”中小企业大赛</div>
-                    <p style="font-size: 12px;">面向中小微企业，且26年深圳区域赛已于7月10日截止报名。<a href="https://www.sz.gov.cn/cn/xxgk/zfxxgj/tzgg/content/post_12762309.html" target="_blank">[深圳工信局通知]</a></p>
+                    <div style="font-weight: 600; font-size: 14px; margin-bottom: 4px;">【中博会“专精特新”专场】</div>
+                    <span class="status-badge badge-red" style="margin-bottom: 6px;">❌ 属性不符</span>
+                    <p style="font-size: 12px;">实际上是展会，非品宣类赛事。时间：2026年9月3日—6日，地点：广州中国进出口商品交易会展馆D区。</p>
                 </div>
 
+                <!-- 颠覆性技术 -->
                 <div class="project-item unmatch" style="padding: 12px; margin-bottom: 10px;">
-                    <div style="font-weight: 600; font-size: 14px; margin-bottom: 4px;">中国创新创业大赛</div>
-                    <p style="font-size: 12px;">属于创业投资类赛事，地方赛明确要求参赛企业“2025年营业收入不超过2亿元人民币”，洲明远超此限额。</p>
+                    <div style="font-weight: 600; font-size: 14px; margin-bottom: 4px;">【全国颠覆性技术创新大赛】</div>
+                    <span class="status-badge badge-red" style="margin-bottom: 6px;">❌ 属性不符</span>
+                    <p style="font-size: 12px;">赛事强调“改变游戏规则的战略技术”项目，非品宣类赛事。目前7月已在尾声总决赛阶段，无法报名。京津冀国家技术创新中心主办。 <a href="https://www2.scut.edu.cn/ist/2026/0302/c29198a618779/page.htm" target="_blank">[详情]</a></p>
                 </div>
 
+                <!-- 创客中国 -->
                 <div class="project-item unmatch" style="padding: 12px; margin-bottom: 10px;">
-                    <div style="font-weight: 600; font-size: 14px; margin-bottom: 4px;">“中国创翼” & “创青春”大赛</div>
-                    <p style="font-size: 12px;">均为针对青年创新、草根及初创团队的创投类比赛，不符合成熟上市公司定位。</p>
+                    <div style="font-weight: 600; font-size: 14px; margin-bottom: 4px;">【“创客中国”中小企业大赛】</div>
+                    <span class="status-badge badge-red" style="margin-bottom: 6px;">❌ 属性不符</span>
+                    <p style="font-size: 12px;">非“中小微企业”，且26年度报名已于7月10日截止，已逾期。<a href="https://www.sz.gov.cn/cn/xxgk/zfxxgj/tzgg/content/post_12762309.html" target="_blank">[详情]</a></p>
                 </div>
 
+                <!-- 中国创新创业大赛 -->
                 <div class="project-item unmatch" style="padding: 12px; margin-bottom: 10px;">
-                    <div style="font-weight: 600; font-size: 14px; margin-bottom: 4px;">“启航十五五” & “强国复兴有我”</div>
-                    <p style="font-size: 12px;">前者聚焦于山东省内，无广东赛区；后者为群众性红色精神主题宣讲，偏政治教化，非商业品宣渠道。</p>
+                    <div style="font-weight: 600; font-size: 14px; margin-bottom: 4px;">【中国创新创业大赛】</div>
+                    <span class="status-badge badge-red" style="margin-bottom: 6px;">❌ 属性不符</span>
+                    <p style="font-size: 12px;">属于“创业赛事”，且地方赛要求企业2025年营业收入不超过2亿元人民币。</p>
                 </div>
 
+                <!-- 其他不匹配项目 -->
                 <div class="project-item unmatch" style="padding: 12px; margin-bottom: 10px;">
-                    <div style="font-weight: 600; font-size: 14px; margin-bottom: 4px;">“中国梦 劳动美”职工宣讲</div>
-                    <p style="font-size: 12px;">为全国总工会组建的内部宣讲团模式。建议品牌部日常可关注地方总工会活动，但不作为常规赛道。</p>
+                    <div style="font-weight: 600; font-size: 13px; margin-bottom: 4px;">青年创业与百姓政务宣讲类</div>
+                    <span class="status-badge badge-red" style="margin-bottom: 6px;">❌ 属性不符</span>
+                    <p style="font-size: 12px; color: var(--text-muted); line-height: 1.4;">
+                        • <strong>“中国创翼” & “创青春”：</strong>针对青年创业、草根创业。<br>
+                        • <strong>“启航十五五”：</strong>面向山东省内，无广东赛区。<br>
+                        • <strong>“强国复兴有我”：</strong>主旨为红色精神群众教化。<br>
+                        • <strong>“中国梦 劳动美”：</strong>全国总工会宣讲团模式（2026年2月28日正式在京成立），非自主申报赛事。
+                    </p>
                 </div>
             </div>
 
-            <!-- 无相关项目说明 -->
+            <!-- 无对应项目信息说明 -->
             <div class="card">
                 <div class="card-title">
-                    <span>四、无对应项目信息</span>
+                    <span>五、无相关项目信息说明</span>
                     <span class="en-title">No Info</span>
                 </div>
                 <ul style="font-size: 13px;">
-                    <li style="margin-bottom: 10px;"><strong>制造业“单项冠军”宣讲：</strong>无对应赛事项目。目前仅有中国工业经济联合会主办的“交流会”，以解读政策为主。最新动态停留在2024年，属政府单向输出。</li>
-                    <li style="margin-bottom: 10px;"><strong>粤港澳大湾区企业家精神宣讲：</strong>公开渠道无常规、可申报的赛事活动。</li>
-                    <li style="margin-bottom: 10px;"><strong>“新质生产力”主题宣讲大赛：</strong>暂无官方对应的固定赛事，后续保持动态关注。</li>
-                    <li style="margin-bottom: 10px;"><strong>“科创中国”创新创业大赛：</strong>无项目信息（疑为“中国创新创业大赛”的误传，无需单独追踪）。</li>
+                    <li style="margin-bottom: 10px;">
+                        <strong>全国制造业“单项冠军”企业创新发展宣讲：</strong>
+                        无相关项目信息。类似活动仅有“单项冠军企业交流会”，旨在解读申报政策，最新新闻为2024年，形式为政府领导单向输出。
+                    </li>
+                    <li style="margin-bottom: 10px;">
+                        <strong>粤港澳大湾区企业家精神高质量宣讲：</strong>
+                        无相关项目信息。
+                    </li>
+                    <li style="margin-bottom: 10px;">
+                        <strong>“新质生产力”主题宣讲大赛：</strong>
+                        无相关项目信息。
+                    </li>
+                    <li style="margin-bottom: 10px;">
+                        <strong>“科创中国”创新创业大赛：</strong>
+                        无相关项目信息（疑为“中国创新创业大赛”之误传）。
+                    </li>
                 </ul>
             </div>
         </div>
